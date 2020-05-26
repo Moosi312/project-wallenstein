@@ -1,0 +1,57 @@
+#####################
+#  Austrian Empire  #
+#####################
+
+austrian_empire = {
+	diplomatic_reputation = 1
+	global_unrest = -1
+	ae_impact = -0.2
+	global_autonomy = -0.05
+}
+
+aue_puppet_pope_modifier = {
+	diplomatic_reputation = 1
+	global_unrest = -1
+	papal_influence = 10
+	global_missionary_strength = 0.1
+	missionaries = 1
+}
+
+aue_baltic_fleet = {
+	naval_forcelimit_modifier = 0.5
+	naval_morale = 0.2
+}
+
+aue_dutch_trade_modifier = {
+	global_trade_power = 0.2
+	trade_efficiency = 0.2
+}
+
+aue_imperium_romanum_sacrum = {
+	max_states = 200
+	state_maintenance_modifier = -0.25
+	diplomatic_reputation = 1
+	prestige = 2
+	ae_impact = -0.5
+	global_autonomy = -0.05
+	yearly_absolutism = 1
+	administrative_efficiency = 0.5
+}
+
+aue_holy_land_reconquered = {
+	global_missionary_strength = 0.1
+	missionaries = 1
+	enforce_religion_cost = -0.5
+}
+
+aue_north_africa_buff = {
+	global_trade_power = 0.2
+	trade_efficiency = 0.2
+	global_tax_modifier = 0.1
+}
+
+aue_austrian_empire = {
+	 global_autonomy = -0.1
+	 prestige = 2
+	 ae_impact = -0.5
+}

@@ -1,0 +1,1 @@
+GCC = "countries/German_Confederation.txt"

@@ -1,0 +1,45 @@
+AUE_ideas = {
+	start = {
+		land_morale = 0.50
+		ae_impact = -0.50
+	}
+	
+	bonus = {
+		reduced_liberty_desire = 50
+	}
+	
+	trigger = {
+		OR = {
+			tag = GCC
+		}
+	}
+	free = yes		#will be added at load.
+
+	imperial_ambitions = {
+		imperial_authority = 0.5
+		diplomatic_annexation_cost = -0.5
+	}
+	military_border = {
+		global_manpower_modifier = 0.33
+		fort_maintenance_modifier = -0.50
+	}
+	fugger_banks = {
+		inflation_reduction = 0.1
+		global_tax_modifier = 0.2
+		global_production_modifier = 0.2
+	}
+	habsburg_dominance = {
+		diplomatic_reputation = 2
+		diplomatic_upkeep = 2
+	}
+	edict_of_restitution = {
+		global_missionary_strength = 0.1
+	}
+	austrian_court = {
+		core_creation = -0.5
+	}
+	hofkriegsrat = {
+		reinforce_speed = 0.5
+		infantry_power = 0.5
+	}
+}

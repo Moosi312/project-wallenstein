@@ -1,0 +1,24 @@
+#######################
+##  Austrian Events  ##
+#######################
+
+country_event = {
+	id = aue.hre.1
+	title = aue.hre.1.t
+	desc = aue.hre.1.d
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name = aue.hre.1.a
+		add_prestige = 25
+		add_legitimacy = 25
+		add_country_modifier = {
+			name = "aue_imperium_romanum_sacrum"
+		}
+		add_government_reform = aue_hre_reform
+	}
+}

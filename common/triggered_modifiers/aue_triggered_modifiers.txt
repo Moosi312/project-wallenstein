@@ -1,0 +1,28 @@
+######################################
+# King of the Romans
+######################################
+king_of_germany = {
+	potential = {
+		hre_size = 1
+	}
+	trigger = {
+		OR = {
+			AND = {
+				calc_true_if = {
+					all_elector = {
+						preferred_emperor = ROOT
+					}
+					amount = 4
+				}
+				num_of_electors = 7
+			}
+			hre_reform_level = 6
+		}
+		hre_size = 25
+	}
+
+	legitimacy = 0.5
+	prestige = 0.5
+	diplomatic_reputation = 1
+	imperial_authority = 0.05
+}

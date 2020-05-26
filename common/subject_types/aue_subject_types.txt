@@ -1,0 +1,24 @@
+aue_margraviate = {
+	copy_from = march
+	
+	takes_diplo_slot = no
+	
+	base_liberty_desire = -50.0
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.5
+		defensiveness = 0.25
+		fort_maintenance_modifier = -0.2
+		army_tradition_decay = -0.3
+		land_morale = 0.1
+		land_maintenance_modifier = -0.2
+	}
+	modifier_subject = {
+		core_creation = 1
+		province_warscore_cost = 10
+	}
+}
+

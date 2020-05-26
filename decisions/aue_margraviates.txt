@@ -1,0 +1,90 @@
+country_decisions = {
+	form_margraviate_bulgaria = {
+		potential = {
+			OR = {
+				tag = AUE
+				tag = GCC
+				tag = HRE
+				tag = EUR
+			}
+			NOT = { exists = BUL }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			bulgaria_area = {
+				owned_by = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			area = bulgaria_area
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			bulgaria_area = {
+				add_core = BUL
+			}
+			release = BUL
+			create_subject = {
+				subject = BUL
+				subject_type = aue_margraviate
+			}
+		}
+	}
+	
+	form_margraviate_romania = {
+		potential = {
+			OR = {
+				tag = AUE
+				tag = GCC
+				tag = HRE
+				tag = EUR
+			}
+			NOT = { exists = RMN }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			OR = {
+				wallachia_area = {
+					owned_by = ROOT
+				}
+				moldavia_area = {
+					owned_by = ROOT
+				}
+				
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = moldavia_area
+				area = wallachia_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			moldavia_area = {
+				add_core = RMN
+			}
+			wallachia_area = {
+				add_core = RMN
+			}
+			release = RMN
+			create_subject = {
+				subject = RMN
+				subject_type = aue_margraviate
+			}
+		}
+	}
+	
+}
