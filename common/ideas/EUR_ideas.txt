@@ -1,4 +1,4 @@
-GCC_ideas = {
+EUR_ideas = {
 	start = {
 		land_morale = 0.50
 		ae_impact = -0.50
@@ -10,7 +10,7 @@ GCC_ideas = {
 	
 	trigger = {
 		OR = {
-			tag = GCC
+			tag = EUR
 		}
 	}
 	free = yes		#will be added at load.

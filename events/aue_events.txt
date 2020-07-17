@@ -22,3 +22,84 @@ country_event = {
 		add_government_reform = aue_hre_reform
 	}
 }
+
+country_event = {
+	id = aue.flavor.1
+	title = aue.flavor.1.t
+	desc = aue.flavor.1.d
+	picture = 
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = aue.flavor.1.a
+
+	}
+	option = {
+		name = aue.flavor.1.b
+		hidden_effect = {
+			moldavia_area = {
+				add_core = RMN
+			}
+			wallachia_area = {
+				add_core = RMN
+			}
+			release = RMN
+			create_subject = {
+				subject = RMN
+				subject_type = aue_margraviate
+			}
+			bulgaria_area = {
+				add_core = BUL
+			}
+			release = BUL
+			create_subject = {
+				subject = BUL
+				subject_type = aue_margraviate
+			}
+		}
+		custom_tooltip = aue.tt.flavor.1.a
+	}
+}
+
+country_event = {
+	id = aue.flavor.2
+	title = aue.flavor.2.t
+	desc = aue.flavor.2.d
+	picture = ORTHODOX_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name = aue.flavor.2.a
+		add_prestige = 25
+		92 = {
+			move_capital_effect = yes
+		}
+	}
+	option = {
+		name = aue.flavor.2.a
+		add_prestige = 25
+		118 = {
+			move_capital_effect = yes
+		}
+	}
+	option = {
+		name = aue.flavor.2.a
+		add_prestige = 25
+		134 = {
+			move_capital_effect = yes
+		}
+	}
+	option = {
+		name = aue.flavor.2.a
+		add_prestige = 25
+		183 = {
+			move_capital_effect = yes
+		}
+	}
+}

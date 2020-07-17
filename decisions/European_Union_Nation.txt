@@ -1,0 +1,81 @@
+country_decisions = {
+
+	german_condeferation_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = TUR }
+			NOT = { exists = EUR }
+			capital_scope = {
+				continent = europe
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 25
+			total_development = 1000
+			owns_core_province = 92
+			owns_core_province = 183
+			owns_core_province = 118
+			owns_core_province = 94
+			owns_core_province = 97
+			OR = {
+				owns_core_province = 12
+				owns_core_province = 372
+				owns_core_province = 236
+			}
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				continent = europe
+			}
+			NOT = { exists = EUR }
+			
+			
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 92
+				province_id = 183
+				province_id = 118
+				province_id = 94
+				province_id = 97
+				province_id = 12
+				province_id = 372
+				province_id = 236
+			}
+			NOT = { owned_by = ROOT }
+		}
+	 	effect = {
+			change_tag = EUR
+			change_government = european_council
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			country_event = { id = aue.flavor.2 }
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = GCC_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+
+			
