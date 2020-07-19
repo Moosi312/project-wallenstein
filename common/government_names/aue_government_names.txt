@@ -1,0 +1,86 @@
+aue_dual_monarchy_hre = {
+	rank = {
+		3 = KAISERREICH
+	}
+	ruler_male = {
+		3 = DUAL_EMPEROR
+	}
+
+	ruler_female = {
+		3 = DUAL_EMPRESS
+	}
+
+	trigger = {
+		is_emperor = yes
+		has_reform = aue_austrian_dual_monarchy
+	}
+}
+
+aue_dual_monarchy_no_hre = {
+	rank = {
+		3 = KAISERREICH
+	}
+	ruler_male = {
+		3 = KAISER
+	}
+
+	ruler_female = {
+		3 = KAISERIN
+	}
+
+	trigger = {
+		is_emperor = no
+		has_reform = aue_austrian_dual_monarchy
+	}
+}
+
+aue_german_confederation = {
+	rank = {
+		3 = GERMAN_CONFEDERATION
+	}
+	ruler_male = {
+		3 = KAISER
+	}
+
+	ruler_female = {
+		3 = KAISERIN
+	}
+
+	trigger = {
+		has_reform = german_conferation
+	}
+}
+
+aue_european_hedgemony = {
+	rank = {
+		3 = EUROPEAN_HEDGEMONY
+	}
+	ruler_male = {
+		3 = SOVEREIGN
+	}
+
+	ruler_female = {
+		3 = SOVEREIGN
+	}
+
+	trigger = {
+		has_reform = european_hedgemony
+	}
+}
+
+aue_european_council = {
+	rank = {
+		3 = EUROPEAN_COUNCIL
+	}
+	ruler_male = {
+		3 = PRESIDENT
+	}
+
+	ruler_female = {
+		3 = PRESIDENT
+	}
+
+	trigger = {
+		has_reform = european_council
+	}
+}

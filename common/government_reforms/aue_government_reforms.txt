@@ -1,15 +1,105 @@
-european_hedgemony = {
+european_hedgemony_legacy = {
 	icon = "horde_riding"
-	allow_normal_conversion = no
 	potential = {
 		tag = EUR
 	}
-	legacy_equivalent = european_hedgemony_legacy
+	legacy_government = yes
 	monarchy = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
+
+	fixed_rank = 3
+	allow_force_tributary = yes
+
+	modifiers = {
+		land_forcelimit_modifier = 0.75
+		global_manpower_modifier = 0.75
+ 		global_manpower = 1
+		global_regiment_cost = -0.4	
+
+		technology_cost = 0.4
+		global_prov_trade_power_modifier = -1.0
+		development_cost = 0.5
+		max_absolutism = 10
+
+		governing_capacity_modifier = 0.5
+	}
+}
+
+european_council_legacy = {
+	icon = "horde_riding"
+	potential = {
+		tag = EUR
+	}
+	legacy_government = yes
+	republic = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+
+	fixed_rank = 3
+	allow_force_tributary = yes
+	has_term_election = no
+
+	modifiers = {
+		max_states = 5
+		global_tax_modifier = 0.1
+		production_efficiency = 0.1
+		technology_cost = 0.4
+		global_prov_trade_power_modifier = -1.0
+		development_cost = 0.5
+		global_autonomy = -0.1
+		max_absolutism = -20
+		governing_capacity_modifier = 0.5
+		global_unrest = -2
+	}
+}
+
+german_conferation_legacy = {
+	icon = "horde_riding"
+	potential = {
+		tag = GCC
+	}
+	monarchy = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
 	locked_government_type = yes
-	allow_normal_conversion = no
+
+	fixed_rank = 3
+	militarised_society = yes
+
+	modifiers = {
+		land_forcelimit_modifier = 0.25
+		global_manpower_modifier = 0.25
+ 		global_manpower = 0.5
+		global_regiment_cost = -0.2
+
+		technology_cost = 0.2
+		global_prov_trade_power_modifier = -1.0
+		development_cost = 0.2
+		max_absolutism = 10
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
+
+		governing_capacity_modifier = 0.2
+	}
+}
+
+european_hedgemony = {
+	icon = "horde_riding"
+	potential = {
+		tag = EUR
+	}
+
+	legacy_equivalent = european_hedgemony_legacy
+
+	monarchy = yes
+
+	valid_for_nation_designer = yes
+
+	nation_designer_cost = 100
+
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
 
 	fixed_rank = 3
 	allow_force_tributary = yes
@@ -163,10 +253,10 @@ european_hedgemony = {
 		global_prov_trade_power_modifier = -1.0
 		development_cost = 0.5
 		max_absolutism = 10
-		
+
 		monarch_diplomatic_power = 1
 		monarch_military_power = 1
-		monarch_administrative_power = 1
+		monarch_admin_power = 1
 
 		governing_capacity_modifier = 0.5
 	}
@@ -174,7 +264,6 @@ european_hedgemony = {
 
 european_council = {
 	icon = "horde_riding"
-	allow_normal_conversion = no
 	potential = {
 		tag = EUR
 	}
@@ -182,8 +271,9 @@ european_council = {
 	republic = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
-	locked_government_type = yes
-	allow_normal_conversion = no
+
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
 
 	fixed_rank = 3
 	allow_force_tributary = yes
@@ -340,7 +430,7 @@ european_council = {
 		global_unrest = -2
 		monarch_diplomatic_power = 1
 		monarch_military_power = 1
-		monarch_administrative_power = 1
+		monarch_admin_power = 1
 	}
 
 	custom_attributes = {
@@ -350,79 +440,21 @@ european_council = {
 	}
 }
 
-european_hedgemony_legacy = {
-	icon = "horde_riding"
-	allow_normal_conversion = no
-	potential = {
-		tag = EUR
-	}
-	legacy = yes
-	monarchy = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 100
-	locked_government_type = yes
-	allow_normal_conversion = no
-
-	fixed_rank = 3
-	allow_force_tributary = yes
-
-	modifiers = {
-		land_forcelimit_modifier = 0.75
-		global_manpower_modifier = 0.75
- 		global_manpower = 1
-		global_regiment_cost = -0.4	
-
-		technology_cost = 0.4
-		global_prov_trade_power_modifier = -1.0
-		development_cost = 0.5
-		max_absolutism = 10
-
-		governing_capacity_modifier = 0.5
-	}
-}
-
-european_council_legacy = {
-	icon = "horde_riding"
-	allow_normal_conversion = no
-	potential = {
-		tag = EUR
-	}
-	legacy_equivalent = european_council_legacy
-	republic = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 100
-	locked_government_type = yes
-	allow_normal_conversion = no
-
-	fixed_rank = 3
-	allow_force_tributary = yes
-	has_term_election = no
-
-	modifiers = {
-		global_tax_modifier = 0.1
-		production_efficiency = 0.1
-		technology_cost = 0.4
-		global_prov_trade_power_modifier = -1.0
-		development_cost = 0.5
-		global_autonomy = -0.1
-		max_absolutism = -20
-		governing_capacity_modifier = 0.5
-		global_unrest = -2
-	}
-}
-
 german_conferation = {
 	icon = "horde_riding"
-	allow_normal_conversion = no
 	potential = {
-		tag = GCC
+		OR = {
+			tag = GCC
+			has_reform = german_conferation
+		}
 	}
 	legacy_equivalent = german_conferation_legacy
 	monarchy = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 50
-	locked_government_type = yes
-	allow_normal_conversion = no
+
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
 
 	fixed_rank = 3
 	militarised_society = yes
@@ -444,18 +476,21 @@ german_conferation = {
 	}
 }
 
-
 aue_austrian_dual_monarchy = {
 	icon = "austrian_dual_monarchy_reform"
-	allow_normal_conversion = yes
 	legacy_equivalent = austrian_archduchy
 	potential = { #added via script
-		tag = AUE
+		OR = {
+			tag = AUE
+			has_reform = aue_austrian_dual_monarchy
+		}
 	}
+
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
-	locked_government_type = yes
-	allow_normal_conversion = no
 
 	fixed_rank = 3
 

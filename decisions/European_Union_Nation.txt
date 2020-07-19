@@ -1,11 +1,8 @@
 country_decisions = {
 
-	german_condeferation_nation = {
+	european_union_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = TUR }
 			NOT = { exists = EUR }
 			capital_scope = {
 				continent = europe
@@ -55,27 +52,27 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = EUR
-			change_government = european_council
-			add_prestige = 25
-			ai_will_do = {
-				factor = 400
-			}
+			
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = { government_rank = 3 }
 				}
-				set_government_rank = 2
+				set_government_rank = 3
 			}
-			country_event = { id = aue.flavor.2 }
+			country_event = { id = aue_flavor.2 }
 			swap_non_generic_missions = yes
 			if = {
 				limit = {
 					has_custom_ideas = no
 					NOT = { has_idea_group = GCC_ideas }
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+#				country_event = { id = ideagroups.1 } #Swap Ideas (no special ideas yet)
 			}
 		}
+		ai_will_do = {
+			factor = 400
+		}
 	}
+}
 
 			

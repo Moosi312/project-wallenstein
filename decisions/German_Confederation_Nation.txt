@@ -7,6 +7,10 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = TUR }
 			NOT = { tag = EUR }
+			OR = {
+				tag = AUE
+				was_never_end_game_tag_trigger = yes
+			}
 			NOT = { exists = GCC }
 			german_primary_culture = yes
 			OR = {
@@ -43,16 +47,16 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = GCC
-			change_government = administrative_monarchy
+			change_government = german_conferation
 			add_prestige = 25
 			ai_will_do = {
 				factor = 400
 			}
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = { government_rank = 3 }
 				}
-				set_government_rank = 2
+				set_government_rank = 3
 			}
 			
 			custom_tooltip = integrate_german_vassals

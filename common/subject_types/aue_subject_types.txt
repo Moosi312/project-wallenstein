@@ -7,18 +7,15 @@ aue_margraviate = {
 	
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
 	modifier_subject = clear #Ditto
+	
 	modifier_subject = {
-		global_manpower_modifier = 0.2
-		land_forcelimit_modifier = 0.5
-		defensiveness = 0.25
-		fort_maintenance_modifier = -0.2
-		army_tradition_decay = -0.3
-		land_morale = 0.1
-		land_maintenance_modifier = -0.2
+		modifier = vassal_nation
 	}
-	modifier_subject = {
-		core_creation = 1
-		province_warscore_cost = 10
+	modifier_overlord = {
+		modifier = vassal_subject
 	}
+
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
 }
 

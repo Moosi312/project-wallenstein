@@ -940,13 +940,6 @@ emp_hab_minorities_branch = {
 			}
 		}
 		effect = {
-			if = {
-				limit = { 
-					government = monarchy
-					is_revolutionary = no 
-				}
-				country_event = { id = flavor_hab.20 }
-			}
 			else = {
 				add_country_modifier = {
 					name = hab_tolerant_society
@@ -1809,6 +1802,12 @@ emp_hab_balkans_2 = {
 				}
 			}
 			country_event = {id = aue.flavor.1 } #create marches bulgaria and romania
+			add_casus_belli = {
+			    target = TUR
+			    type = cb_shatter_empire
+			    months = 240
+			}
+
 		}
 	}
 	

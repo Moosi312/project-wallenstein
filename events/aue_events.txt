@@ -2,31 +2,12 @@
 ##  Austrian Events  ##
 #######################
 
-country_event = {
-	id = aue.hre.1
-	title = aue.hre.1.t
-	desc = aue.hre.1.d
-	picture = ORTHODOX_eventPicture
-	
-	is_triggered_only = yes
-	
-	major = yes
-
-	option = {
-		name = aue.hre.1.a
-		add_prestige = 25
-		add_legitimacy = 25
-		add_country_modifier = {
-			name = "aue_imperium_romanum_sacrum"
-		}
-		add_government_reform = aue_hre_reform
-	}
-}
+namespace = aue_flavor
 
 country_event = {
-	id = aue.flavor.1
-	title = aue.flavor.1.t
-	desc = aue.flavor.1.d
+	id = aue_flavor.1
+	title = aue_flavor.1.t
+	desc = aue_flavor.1.d
 	picture = 
 
 	is_triggered_only = yes
@@ -34,11 +15,11 @@ country_event = {
 	major = yes
 
 	option = {
-		name = aue.flavor.1.a
+		name = aue_flavor.1.a
 
 	}
 	option = {
-		name = aue.flavor.1.b
+		name = aue_flavor.1.b
 		hidden_effect = {
 			moldavia_area = {
 				add_core = RMN
@@ -65,9 +46,44 @@ country_event = {
 }
 
 country_event = {
-	id = aue.flavor.2
-	title = aue.flavor.2.t
-	desc = aue.flavor.2.d
+	id = aue_flavor.2
+	title = aue_flavor.2.t
+	desc = aue_flavor.2.d
+	picture = ORTHODOX_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {#monarchy
+		name = aue_flavor.2.a
+		if = {
+			limit = {
+				NOT = { government = monarchy }
+			}
+			change_government = monarchy
+		}
+		add_government_reform = european_hedgemony
+	}
+	option = {#republic
+		name = aue_flavor.2.b
+		if = {
+			limit = {
+				NOT = { government = republic }
+			}
+			change_government = republic
+		}
+		add_government_reform = european_hedgemony
+	}
+	after = {
+		country_event = { id = aue_flavor.3 }
+	}
+}
+
+country_event = {
+	id = aue_flavor.3
+	title = aue_flavor.3.t
+	desc = aue_flavor.3.d
 	picture = ORTHODOX_eventPicture
 	
 	is_triggered_only = yes
@@ -75,31 +91,52 @@ country_event = {
 	major = yes
 
 	option = {
-		name = aue.flavor.2.a
+		name = aue_flavor.3.a
 		add_prestige = 25
 		92 = {
 			move_capital_effect = yes
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
 		}
 	}
 	option = {
-		name = aue.flavor.2.a
+		name = aue_flavor.3.b
 		add_prestige = 25
 		118 = {
 			move_capital_effect = yes
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
 		}
 	}
 	option = {
-		name = aue.flavor.2.a
+		name = aue_flavor.3.c
 		add_prestige = 25
 		134 = {
 			move_capital_effect = yes
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
 		}
 	}
 	option = {
-		name = aue.flavor.2.a
+		name = aue_flavor.3.e
 		add_prestige = 25
 		183 = {
 			move_capital_effect = yes
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+	}
+	option = {
+		name = aue_flavor.3.f
+		add_prestige = 25
+		capital_scope = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
 		}
 	}
 }

@@ -9,6 +9,7 @@ country_decisions = {
 			NOT = { tag = TUR }
 			NOT = { tag = EUR }
 			NOT = { exists = AUE }
+			was_never_end_game_tag_trigger = yes
 			OR = {
 				primary_culture = austrian
 				primary_culture = hungarian
@@ -62,7 +63,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = AUE
-			change_government = administrative_monarchy
+			change_government = aue_austrian_dual_monarchy
 			add_prestige = 25
 			set_capital = 134 # Wien
 			if = {
@@ -76,9 +77,9 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = { government_rank = 3 }
 				}
-				set_government_rank = 2
+				set_government_rank = 3
 			}
 			#add claims venice emilia romagna bosnia serbia jerusalem lowlands danzig switzerland bavaria northern_italy(north of po) saxony? balkans? moldavia wallachia
 			swap_non_generic_missions = yes
