@@ -47,7 +47,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = GCC
-			change_government = german_conferation
+			add_government_reform = german_conferation
 			add_prestige = 25
 			ai_will_do = {
 				factor = 400

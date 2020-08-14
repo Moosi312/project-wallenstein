@@ -63,7 +63,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = AUE
-			change_government = aue_austrian_dual_monarchy
+			add_government_reform = aue_austrian_dual_monarchy
 			add_prestige = 25
 			set_capital = 134 # Wien
 			if = {

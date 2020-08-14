@@ -940,11 +940,9 @@ emp_hab_minorities_branch = {
 			}
 		}
 		effect = {
-			else = {
-				add_country_modifier = {
-					name = hab_tolerant_society
-					duration = -1
-				}
+			add_country_modifier = {
+				name = hab_tolerant_society
+				duration = -1
 			}
 		}
 	}
@@ -1762,21 +1760,24 @@ emp_hab_balkans_2 = {
 				area = wallachia_area
 				area = silistria_area
 				area = bulgaria_area
+				area = moldavia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			wallachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = wallachia_area
+					area = moldavia_area
+				}
 			}
-			silistria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			bulgaria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = bulgaria_area
+					area = silistria_area
+				}
 			}
 		}
 		effect = {
@@ -1801,7 +1802,7 @@ emp_hab_balkans_2 = {
 					add_claim = root
 				}
 			}
-			country_event = {id = aue.flavor.1 } #create marches bulgaria and romania
+			country_event = {id = aue_flavor.1 } #create marches bulgaria and romania
 			add_casus_belli = {
 			    target = TUR
 			    type = cb_shatter_empire

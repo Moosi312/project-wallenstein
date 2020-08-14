@@ -9,12 +9,26 @@ austrian_empire = {
 	global_autonomy = -0.05
 }
 
-aue_puppet_pope_modifier = {
-	diplomatic_reputation = 1
-	global_unrest = -1
-	papal_influence = 10
-	global_missionary_strength = 0.1
-	missionaries = 1
+aue_militarakademie = {
+	discipline = 0.05
+	army_tradition = 0.5
+	defensiveness = 0.25
+	siege_ability = 0.1
+	general_cost = -0.5
+}
+
+aue_prageru = {
+	technology_cost = -0.1
+	all_power_cost = -0.1
+	advisor_cost = -0.25
+	institution_growth = 1
+}
+
+aue_naval_collage = {
+	navy_tradition = 1
+	naval_attrition = -0.1
+	naval_morale = 0.1
+	ship_durability = 0.1
 }
 
 aue_baltic_fleet = {
@@ -54,4 +68,121 @@ aue_austrian_empire = {
 	 global_autonomy = -0.1
 	 prestige = 2
 	 ae_impact = -0.5
+}
+
+aue_eur_navy = {
+	navy_tradition = 1
+	naval_morale = 0.1
+}
+
+aue_reach = {
+	range = 0.5
+	trade_range_modifier = 0.25
+}
+
+aue_colonial_rush = {
+	colonists = 2
+	global_colonial_growth = 100
+}
+
+aue_eur_caribbean_sugar = {
+	global_unrest = -2
+	war_exhaustion = -0.1
+}
+
+aue_eur_brazilian_wood = {
+	development_cost = -0.1
+	build_cost = -0.25
+}
+
+aue_eur_ambers = {
+	global_tax_modifier = 0.05
+}
+
+aue_arabian_coffe = {
+	governing_capacity_modifier = 0.1
+	advisor_cost = -0.25
+}
+
+aue_eur_spice_islands = {
+	global_trade_power = 0.1
+	state_maintenance_modifier = -0.25
+}
+
+aue_eur_mexican_silverware = {
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1
+	meritocracy = 1
+}
+
+aue_eur_south_american_gold = {
+	reform_progress_growth = 0.5
+	prestige = 1
+}
+
+aue_eur_american_colony = {
+	liberty_desire = -50
+	liberty_desire_from_subject_development = -0.5
+}
+
+aue_european_union = {
+	reform_progress_growth = 0.5
+	prestige = 1
+	administrative_efficiency = 0.2
+	diplomatic_reputation = 1
+}
+
+aue_eur_persian_rule = {
+	land_maintenance_modifier = -0.1
+	discipline = 0.1
+}
+
+aue_european_raj = {
+	global_trade_power = 0.1
+	global_manpower_modifier = 0.1
+	manpower_recovery_speed = 0.33
+}
+
+aue_eur_global_trade_hedgemon = {
+	global_trade_power = 0.33
+	trade_efficiency = 0.33
+	trade_steering = 0.33
+	embargo_efficiency = 0.33
+}
+
+aue_eur_east_sea_board = {
+	colonists = 1
+	global_colonial_growth = 100
+	native_uprising_chance = -0.5
+	global_tariffs = 0.25
+}
+
+aue_eur_army = {
+	discipline = 0.1
+	land_maintenance_modifier = -0.1
+	land_morale = 0.1
+}
+
+aue_eur_caucasus = {
+	mercenary_cost = -0.1
+	merc_maintenance_modifier = -0.1
+	mercenary_manpower= 0.1
+	mercenary_discipline = 0.1
+}
+
+aue_eur_russian_manpower = {
+	global_manpower_modifier = 0.2
+	manpower_recovery_speed = 0.33
+}
+
+aue_vassal_horde = {
+	liberty_desire = -50
+	liberty_desire_from_subject_development = -0.5
+}
+
+aue_eur_african_supremacy = {
+	global_trade_goods_size_modifier = 0.1
+	global_ship_trade_power = 0.2
 }

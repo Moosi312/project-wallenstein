@@ -1,0 +1,90 @@
+country_decisions = {
+
+	aue_militarakademie_des = {
+		major = yes
+		potential = {
+			owns = 134 #vienna
+			134 = {
+				NOT = { has_province_modifier = aue_militarakademie }
+			}
+		}
+		allow = {
+			owns = 134
+			mil_tech = 10
+			mil = 5
+			treasury = 1000
+			army_tradition = 30
+			army_professionalism = 0.3
+		}
+	 	effect = {
+	 		134 = {
+				add_province_modifier = { 
+				    name = aue_militarakademie
+				    duration = -1
+				}
+			}
+			add_prestige = 10
+			add_mil_power = 100
+			add_army_tradition = 10
+			add_treasury = -1000
+		}
+	}
+
+	aue_prageru_des = {
+		major = yes
+		potential = {
+			owns = 266 #prague
+			266 = {
+				NOT = { has_province_modifier = aue_prageru }
+			}
+		}
+		allow = {
+			owns = 266
+			adm_tech = 10
+			adm = 5
+			treasury = 1000
+			innovativeness = 20
+		}
+	 	effect = {
+	 		266 = {
+				add_province_modifier = { 
+				    name = aue_prageru
+				    duration = -1
+				}
+			}
+			add_prestige = 10
+			add_adm_power = 100
+			change_innovativeness = 10
+			add_treasury = -1000
+		}
+	}
+
+	aue_naval_collage_des = {
+		major = yes
+		potential = {
+			owns = 87 #calais
+			87 = {
+				NOT = { has_province_modifier = aue_naval_collage }
+			}
+		}
+		allow = {
+			owns = 87
+			dip_tech = 10
+			dip = 5
+			treasury = 1000
+			navy_tradition = 50
+		}
+	 	effect = {
+	 		87 = {
+				add_province_modifier = { 
+				    name = aue_naval_collage
+				    duration = -1
+				}
+			}
+			add_prestige = 10
+			add_adm_power = 100
+			add_navy_tradition = 10
+			add_treasury = -1000
+		}
+	}
+}

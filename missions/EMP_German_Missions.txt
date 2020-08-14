@@ -104,6 +104,7 @@ emp_germany_hlr_1 = {
 		}
 	}
 }
+
 emp_germany_hlr_1_ger = {
 	slot = 1
 	generic = no
@@ -112,7 +113,10 @@ emp_germany_hlr_1_ger = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		tag = GER
+		OR = {
+			tag = GER
+			tag = GCC
+		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 	}
@@ -711,7 +715,10 @@ emp_germany_hlr_3_ger = {
 		has_dlc = "Emperor"
 	}
 	potential = {
-		tag = GER
+		OR = {
+			tag = GER
+			tag = GCC
+		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 	}

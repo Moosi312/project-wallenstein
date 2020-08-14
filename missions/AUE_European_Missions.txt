@@ -1,0 +1,1104 @@
+EUR_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = EUR
+	}
+	has_country_shield = yes
+
+	aue_naval_reform = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { aue_european_union }
+		position = 2
+		trigger = {
+			navy_size = 200
+			navy_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_navy
+				duration = -1
+			}
+		}
+	}
+
+	aue_colonial_ambition = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { aue_naval_reform }
+		position = 3
+		trigger = {
+			num_of_colonists = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_reach
+				duration = -1
+			}
+		}
+	}
+
+	aue_colonial_fleet = {
+		icon = mission_sea_battles
+		required_missions = { aue_colonial_ambition }
+		position = 5
+		trigger = {
+			num_of_heavy_ship = 40
+			num_of_transport = 20
+			num_of_light_ship = 100
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_colonial_rush
+				duration = -1
+			}
+		}
+	}
+
+	aue_eur_caribbean = {
+		icon = mission_unite_home_region
+		required_missions = { aue_colonial_fleet }
+		position = 7
+		provinces_to_highlight = {
+			colonial_region = colonial_the_carribean
+			has_discovered = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_city = no
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				colonial_region = colonial_the_carribean
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_caribbean_sugar
+				duration = -1
+			}
+		}
+	}
+
+	aue_eur_brazil = {
+		icon = mission_colonial
+		required_missions = { aue_eur_caribbean }
+		position = 8
+		provinces_to_highlight = {
+			colonial_region = colonial_brazil
+			has_discovered = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_city = no
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				colonial_region = colonial_brazil
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_brazilian_wood
+				duration = -1
+			}
+		}
+	}
+
+	aue_eur_south_america = {
+		icon = mission_early_game_buildings
+		required_missions = { aue_eur_brazil }
+		position = 9
+		provinces_to_highlight = {
+			continent = south_america
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				continent = south_america
+			}
+		}
+		effect = {
+			#do something: add gold buff
+		}
+	}
+}
+
+EUR_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = EUR
+	}
+	has_country_shield = yes
+
+	aue_eur_north_africa = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { aue_naval_reform }
+		position = 3
+		provinces_to_highlight = {
+			region = maghreb_region
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			maghreb_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			#to stuff
+		}
+	}
+
+	aue_eur_levant = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { aue_eur_anatolia }
+		position = 4
+		provinces_to_highlight = {
+			region = mashriq_region
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			mashriq_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_ambers
+				duration = -1
+			}
+			arabia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			egypt_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_eur_arabia = {
+		icon = mission_unite_home_region
+		required_missions = { aue_eur_levant }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				region = arabia_region
+				region = egypt_region
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			arabia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			egypt_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_arabian_coffe
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_east_indies = {
+		icon = mission_dominate_home_trade_node
+		position = 6
+		required_missions = { aue_eur_colonial_fleet }
+		provinces_to_highlight = {
+			OR = {
+				region = moluccas_region
+				region = indonesia_region
+				region = malaya_region
+			}
+			has_discovered = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_city = no
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					region = moluccas_region
+					region = indonesia_region
+					region = malaya_region
+				}
+			}
+		}
+		effect = {
+			east_indies_superregion = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = aue_eur_spice_islands
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_mexico = {
+		icon = mission_war_chest
+		required_missions = { aue_eur_caribbean }
+		position = 8
+		provinces_to_highlight = {
+			colonial_region = colonial_mexico
+			has_discovered = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_city = no
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				colonial_region = colonial_mexico
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_mexican_silverware
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_central_america = {
+		icon = mission_african_soldier
+		required_missions = { aue_eur_mexico }
+		position = 9
+		provinces_to_highlight = {
+			superregion = central_america_superregion
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			central_america_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_south_american_gold
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_america = {
+		icon = mission_unite_home_region
+		required_missions = { aue_eur_central_america }
+		position = 10
+		trigger = {
+			NOT = {
+				any_subject = {
+					colony = yes
+					liberty_desire = 50
+				}
+			}
+		}
+		effect = {
+			every_subject = {
+				trigger = {
+					colony = yes
+				}
+				add_country_modifier = {
+					name = aue_eur_american_colony
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+EUR_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = EUR
+	}
+	has_country_shield = yes
+	
+	aue_european_union = {
+		icon = mission_empire
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				region = balkan_region
+				region = carpathia_region
+				region = south_german_region
+				region = north_german_region
+				region = britain_region
+				region = low_countries_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			italy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			france_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iberia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			balkan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			carpathia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_german_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_german_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			britain_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			low_countries_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_european_union
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_anatolia = {
+		icon = mission_non-western_cavalry_raid
+		required_missions = { aue_eur_army_reform }
+		position = 3
+		provinces_to_highlight = {
+			region = anatolia_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			anatolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			persia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			khorasan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_eur_persia = {
+		icon = mission_galleys_in_port
+		required_missions = { aue_eur_anatolia }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				region = persia_region
+				region = khorasan_region
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				OR = {
+					region = persia_region
+					regio = khorasan_region
+				}
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_persian_rule
+				duration = -1
+			}
+		}
+	}
+
+	aue_eur_indian_ports = {
+		icon = mission_assemble_an_army
+		required_missions = { aue_eur_persia }
+		position = 5
+		provinces_to_highlight = {
+			superregion = india_superregion
+			has_discovered = ROOT
+			is_empty = no
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				superregion = india_superregion
+			}
+		}
+		effect = {
+			india_superregion = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_eur_india = {
+		icon = mission_assemble_an_army
+		required_missions = { aue_eur_indian_ports }
+		position = 6
+		provinces_to_highlight = {
+			superregion = india_superregion
+			has_discovered = ROOT
+			is_empty = no
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 100
+				superregion = india_superregion
+			}
+		}
+		effect = {
+			effect = {
+				add_country_modifier = {
+					name = aue_european_raj
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	aue_aur_global_trade = {
+		icon = mission_asian_trader
+		required_missions = {
+			aue_eur_east_indies
+			aue_eur_india
+		}
+		position = 7
+		trigger = {
+			any_active_trade_node = {
+				is_strongest_trade_power = PREV
+				highest_value_trade_node = yes
+			}
+			trade_income_percentage = 0.3
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_global_trade_hedgemon
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_east_america = {
+		icon = mission_colonial
+		required_missions = { aue_eur_caribbean }
+		position = 8
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			has_discovered = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_city = no
+			}
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				colonial_region = colonial_eastern_america
+				is_city = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_east_sea_board
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_north_america = {
+		icon = mission_early_game_buildings
+		required_missions = { aue_eur_east_america }
+		position = 9
+		provinces_to_highlight = {
+			superregion = north_america_superregion
+			has_discovered = ROOT
+			OR = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				is_city = no
+			}
+		}
+		trigger = {
+			north_america_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_province_modifier = {
+					name = "aue_eur_north_american_grain"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+EUR_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = EUR
+	}
+	has_country_shield = yes
+
+	aue_eur_army_reform = {
+		icon = mission_assemble_an_army
+		required_missions = { aue_european_union }
+		position = 2
+		trigger = {
+			army_size = 200
+			army_size_percentage = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_army
+				duration = -1
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			baltic_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ruthenia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			crimea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yedisan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			zaporizhia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_eur_ruthenia = {
+		icon = mission_cannons_firing
+		required_missions = { aue_eur_army_reform }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				region = ruthenia_region
+				area = crimea_area
+				area = yedisan_area
+				area = zaporizhia_area
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			ruthenia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yedisan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			zaporizhia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			crimea_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			caucasia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_eur_caucasus = {
+		icon = mission_invade_island
+		required_missions = { aue_eur_ruthenia }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				region = crimea_region
+				region = caucasia_region
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			crimea_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			caucasia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_caucasus
+				duration = -1
+			}
+		}
+	}
+	
+	aue_eur_south_east_asia = {
+		icon = mission_arabian_fort
+		required_missions = { aue_eur_indian_ports }
+		position = 6
+		provinces_to_highlight = {
+			region = east_indies_superregion
+				has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				superregion = east_indies_superregion
+			}
+		}
+		effect = {
+			east_indies_superregion =  = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_strike_china = {
+		icon = mission_galleys_in_port
+		required_missions = {
+			aue_eur_south_east_asia
+			aue_no_hordes
+		}
+		position = 7
+		trigger = {
+			if = {
+				trigger = {
+					MNG = {
+						exists = yes
+						is_emperor_of_china = yes
+					}
+				}
+					army_strength = {
+					who = MNG
+					value = 2
+				}
+			}
+			else_if = {
+				trigger = {
+					QNG = {
+						exists = yes
+						is_emperor_of_china = yes
+					}
+				}
+					army_strength = {
+					who = QNG
+					value = 2
+				}
+			}
+			else_if = {
+				trigger = {
+					YUA = {
+						exists = yes
+						is_emperor_of_china = yes
+					}
+				}
+					army_strength = {
+					who = YUA
+					value = 2
+				}
+			}
+			else = {
+				army_size = 300
+			}
+		}
+		effect = {
+			north_china_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_china_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			xinan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+EUR_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = EUR
+	}
+	has_country_shield = yes
+	
+	aue_eur_scandinavia = {
+		icon = mission_alliances
+		required_missions = { aue_eur_army_reform }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				region = scandinavia_region
+				region = baltic_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			scandinavia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			baltic_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			russia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ural_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_eur_russia = {
+		icon = mission_assemble_an_army
+		required_missions = { aue_eur_scandinavia }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				region = russia_region
+				region = ural_region
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					region = russia_region
+					region = ural_region
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_russian_manpower
+				duration = -1
+			}
+		}
+	}
+	
+	aue_crush_hordes = {
+		icon = mission_empire
+		required_missions = {
+			aue_eur_russia
+			aue_eur_caucasus
+		}
+		position = 5
+		provinces_to_highlight = {
+			owner = {
+				capital_scope = {
+					OR = {
+						superregion = tartary_superregion
+						region = ural_region
+						region = manchuria_region
+					}
+				}
+				government = tribal
+				NOT = { subject_of = ROOT }
+			}
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					capital_scope = {
+						OR = {
+							superregion = tartary_superregion
+							region = ural_region
+							region = manchuria_region
+						}
+					}
+					government = tribal
+					NOT = { subject_of = ROOT }
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					superregion = tartary_superregion
+					region = ural_region
+					region = manchuria_region
+				}
+			}
+		}
+		effect = {
+			tartary_superregion = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				remove_core = ROOT
+				add_core = ETA
+				cede_province = ETA
+			}
+			ural_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				remove_core = ROOT
+				add_core = ETA
+				cede_province = ETA
+			}
+			manchuria_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				remove_core = ROOT
+				add_core = ETA
+				cede_province = ETA
+			}
+			create_subject = {
+				subject = ETA
+				subject_type = march
+			}
+			REA = {
+				add_country_modifier = {
+					name = aue_vassal_horde
+					duration = -1
+				}
+				add_government_reform = great_mongol_state_reform
+			}
+			add_stability = 1
+		}
+	}
+	
+	aue_eur_south_africa = {
+		icon = mission_invade_island
+		required_missions = { aue_eur_caribbean }
+		position = 8
+		provinces_to_highlight = {
+			region = south_africa_region
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			south_africa_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			east_africa_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			horn_of_africa_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guinea_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	aue_eur_scramble_africa = {
+		icon = mission_non-western_cavalry_raid
+		required_missions = { Rome_Caspian_sea }
+		position = 9
+		provinces_to_highlight = {
+			OR = {
+				superregion = africa_superregion
+				superregion = southern_africa_superregion
+			}
+			has_discovered = ROOT
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 75
+				OR = {
+					superregion = africa_superregion
+					superregion = southern_africa_superregion
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = aue_eur_african_supremacy
+				duration = -1
+			}
+			africa_superregion = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_africa_superregion = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
