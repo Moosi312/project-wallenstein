@@ -6,4 +6,4 @@ tags={
 	"Gameplay"
 }
 name="Austrian Empire"
-supported_version="1.29.5"
+supported_version="1.30.*"

@@ -166,6 +166,7 @@ monarchy = {
 				angevin_nobles_reform
 				parliament_of_sicily_reform
 				nationalized_cetas_reform
+				federal_empire
 			}
 		}
 		bureaucracy = {
@@ -662,6 +663,7 @@ republic = {
 				support_guelphs_reform
 				legacy_of_st_ambrose_reform
 				hanseatic_ties_reform
+				federal_empire
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -1009,6 +1011,7 @@ theocracy = {
 				united_cantons_reform
 				ajuraan_theocracy_reform
 				dynastic_theocracy_reform
+				european_church
 			}
 		}
 		internal_vs_external_mission = {
@@ -1019,6 +1022,7 @@ theocracy = {
 				mission_to_civilize_reform
 				mission_to_kill_pirates_reform
 				#teuton_drill
+				federal_empire
 			}
 		}
 		divine_cause = {

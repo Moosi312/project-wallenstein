@@ -67,6 +67,7 @@ country_event = {
 			change_government_to_monarchy = yes
 		}
 		add_government_reform = european_hedgemony
+		add_government_reform = federal_empire
 	}
 	option = {#republic
 		name = aue_flavor.2.b
@@ -77,6 +78,18 @@ country_event = {
 			change_government_to_republic = yes
 		}
 		add_government_reform = european_council
+		add_government_reform = federal_empire
+	}
+	option = {#theocracy
+		name = aue_flavor.2.b
+		if = {
+			limit = {
+				NOT = { government = theocracy }
+			}
+			change_government_to_theocracy = yes
+		}
+		add_government_reform = european_church
+		add_government_reform = federal_empire
 	}
 	after = {
 		country_event = { id = aue_flavor.3 }

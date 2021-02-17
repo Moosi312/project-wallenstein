@@ -14,3 +14,64 @@ superiority_shatter = {
 
 	war_name = SHATTER_EMPIRE
 }
+
+take_province_unify = {
+	type = take_province
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 2
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			continent = europe
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_CGROUP_COUNTRIES
+		prov_desc = ALL_CGROUP_PROVS
+	}
+	
+
+	war_name = SHATTER_EMPIRE
+}
+
+take_capital_unify = {
+	type = take_capital
+	
+	badboy_factor = 0.5
+	prestige_factor = 1.5
+	peace_cost_factor = 0.25
+	
+	peace_options = {
+		po_become_vassal
+	}
+
+	war_name = SHATTER_EMPIRE
+}
+
+superiority_unify = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 2
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			religion_group = ROOT
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_CGROUP_COUNTRIES
+		prov_desc = ALL_CGROUP_PROVS
+
+
+	war_name = SHATTER_EMPIRE
+}

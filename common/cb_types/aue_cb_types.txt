@@ -6,3 +6,52 @@ cb_shatter_empire = {
 
 	war_goal = superiority_shatter
 }
+
+# Unify Europe
+cb_province_unify = {
+	valid_for_subject = no
+	months = 240
+
+	prerequisites = {
+		has_reform = european_hedgemony
+	}
+
+	war_goal = take_province_unify
+}
+
+# Expand Federation
+cb_subject_unify = {
+	valid_for_subject = no
+	months = 240
+
+	prerequisites = {
+		has_reform = european_council
+		is_revolution_target = no
+		FROM = {
+			capital_scope = {
+				continent = europe
+			}
+		}
+	}
+
+	war_goal = take_capital_unify
+}
+
+# Unify Christianity
+cb_church_unify = {
+	valid_for_subject = no
+	months = 240
+
+	prerequisites = {
+		has_reform = european_church
+		is_revolution_target = no
+		FROM = {
+			any_province = {
+					religion_group = ROOT
+				}
+		}
+		}
+	}
+
+	war_goal = superiority_unify
+}

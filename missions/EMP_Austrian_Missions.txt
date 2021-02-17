@@ -76,7 +76,7 @@ emp_hab_poland_branch = {
 		effect = {
 			add_country_modifier = {
 				name = "austrian_empire"
-				duration = 7300
+				duration = -1
 			}
 			if = {
 				limit = {
@@ -187,7 +187,7 @@ emp_hab_empire_branch = {
 			add_dip_power = 50
 			add_country_modifier = {
 				name = hab_ascendancy_in_empire
-				duration = 7300
+				duration = -1
 			}
 		}
 	}
@@ -588,7 +588,7 @@ emp_hab_prestige_branch = {
 						estate = estate_nobles
 						desc = VAL_HAB_BALANCED_ESTATES
 						loyalty = 10
-						duration = 7300
+						duration = -1
 					}
 				}
 				if = {
@@ -599,7 +599,7 @@ emp_hab_prestige_branch = {
 						estate = estate_church
 						desc = VAL_HAB_BALANCED_ESTATES
 						loyalty = 10
-						duration = 7300
+						duration = -1
 					}
 				}
 				if = {
@@ -610,7 +610,7 @@ emp_hab_prestige_branch = {
 						estate = estate_burghers
 						desc = VAL_HAB_BALANCED_ESTATES
 						loyalty = 10
-						duration = 7300
+						duration = -1
 					}
 				}
 			}
@@ -1131,7 +1131,7 @@ emp_hab_german_expansion_branch = {
 				add_nationalism = -5
 				add_province_modifier = {
 					name = hab_holdings_in_swabia
-					duration = 10950
+					duration = -1
 				}
 			}
 			lower_swabia_area = {
@@ -1139,7 +1139,7 @@ emp_hab_german_expansion_branch = {
 				add_nationalism = -5
 				add_province_modifier = {
 					name = hab_holdings_in_swabia
-					duration = 10950
+					duration = -1
 				}
 			}
 			upper_rhineland_area = {
@@ -1147,7 +1147,7 @@ emp_hab_german_expansion_branch = {
 				add_nationalism = -5
 				add_province_modifier = {
 					name = hab_holdings_in_swabia
-					duration = 10950
+					duration = -1
 				}
 			}
 		}
@@ -1568,18 +1568,18 @@ emp_hab_western_expansion_branch = {
 		effect = {
 			add_country_modifier = {
 				name = hab_empire_in_the_west
-				duration = 7300
+				duration = -1
 			}
 			bourgogne_area = {
 				add_province_modifier = {
 					name = hab_back_into_empire
-					duration = 7300
+					duration = -1
 				}
 			}
 			lorraine_area = {
 				add_province_modifier = {
 					name = hab_back_into_empire
-					duration = 7300
+					duration = -1
 				}
 			}
 			every_country = {
@@ -1625,7 +1625,7 @@ emp_hab_western_expansion_branch = {
 		effect = {
 			add_country_modifier = {
 				name = hab_take_that_napoleon
-				duration = 10950
+				duration = -1
 			}
 		}
 	}
@@ -1712,7 +1712,7 @@ emp_hab_balkans = {
 			
 			add_country_modifier = {
 				name = hab_conquered_serbia
-				duration = 7300
+				duration = -1
 			}
 
 			bulgaria_area = {
@@ -2030,7 +2030,7 @@ emp_hab_more_italy_branch = {
 		effect = {
 			add_country_modifier = {
 				name = hab_conquest_of_italy
-				duration = 7300
+				duration = -1
 			}
 			italy_region = {
 				limit = {

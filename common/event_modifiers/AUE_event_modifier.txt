@@ -2,6 +2,10 @@
 #  Austrian Empire  #
 #####################
 
+autonomous_personal_uniion_modifier = {
+	legitimate_subject_elector = 0
+}
+
 austrian_empire = {
 	diplomatic_reputation = 1
 	global_unrest = -1
@@ -117,13 +121,31 @@ aue_eur_mexican_silverware = {
 	meritocracy = 1
 }
 
+aue_eur_banana_republics = {
+	candidate_random_bonus = 3
+	reelection_cost = -0.5
+	expand_administration_cost = -0.5
+	trade_goods_size_modifier = 0.25
+	monthly_splendor = 1
+	legitimacy = 1
+}
+
 aue_eur_south_american_gold = {
 	reform_progress_growth = 0.5
 	prestige = 1
 }
 
+aue_eur_north_american_grain = {
+	stability_cost_modifier = -0.2
+	global_unrest = -2
+	years_of_nationalism = -5
+}
+
 aue_eur_american_colony = {
 	liberty_desire = -50
+}
+
+aue_american_overlord = {
 	liberty_desire_from_subject_development = -0.5
 }
 
@@ -185,4 +207,17 @@ aue_vassal_horde = {
 aue_eur_african_supremacy = {
 	global_trade_goods_size_modifier = 0.1
 	global_ship_trade_power = 0.2
+}
+
+aue_european_unity = {
+	monarch_diplomatic_power = 1
+	monarch_military_power = 1
+	monarch_admin_power = 1
+
+	technology_cost = -0.4
+	global_prov_trade_power_modifier = 1.0
+	global_prov_trade_power_modifier = -1.0
+	max_absolutism = 20
+
+	governing_capacity_modifier = 1
 }
