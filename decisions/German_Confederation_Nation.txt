@@ -46,6 +46,7 @@ country_decisions = {
 			NOT = { country_or_subject_holds = ROOT }
 		}
 	 	effect = {
+	 		restore_country_name = yes
 			change_tag = GCC
 			add_government_reform = german_conferation
 			add_prestige = 25
@@ -82,7 +83,7 @@ country_decisions = {
 					limit = {
 						culture_group = germanic
 						owner = {
-							NOT = { is_colonial_nation = yes }
+							is_colonial_nation = no
 							OR = {
 								AND = {
 									NOT = { culture_group = germanic }
@@ -93,7 +94,7 @@ country_decisions = {
 							NOT = { tag = ROOT }
 						}
 					}
-					add_permanent_claim = ROOT
+					add_claim = ROOT
 				}
 			}
 			#add claims venice emilia romagna bosnia serbia jerusalem lowlands danzig switzerland bavaria northern_italy(north of po) saxony? balkans? moldavia wallachia
@@ -101,13 +102,9 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = GCC_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-		}
-		hidden_effect = {
-			
 		}
 	}
 

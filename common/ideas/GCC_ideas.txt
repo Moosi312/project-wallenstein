@@ -1,7 +1,7 @@
 GCC_ideas = {
 	start = {
 		land_morale = 0.30
-		ae_impact = -0.10
+		ae_impact = -0.30
 	}
 	
 	bonus = {

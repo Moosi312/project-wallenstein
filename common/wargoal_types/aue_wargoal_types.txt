@@ -36,7 +36,7 @@ take_province_unify = {
 	}
 	
 
-	war_name = SHATTER_EMPIRE
+	war_name = PROVINCE_UNIFY
 }
 
 take_capital_unify = {
@@ -50,7 +50,7 @@ take_capital_unify = {
 		po_become_vassal
 	}
 
-	war_name = SHATTER_EMPIRE
+	war_name = CAPITAL_UNIFY
 }
 
 superiority_unify = {
@@ -73,5 +73,5 @@ superiority_unify = {
 		prov_desc = ALL_CGROUP_PROVS
 
 
-	war_name = SHATTER_EMPIRE
+	war_name = SUPERIORITY_UNIFY
 }

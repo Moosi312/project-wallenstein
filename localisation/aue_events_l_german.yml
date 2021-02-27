@@ -1,6 +1,5 @@
 ﻿l_german:
  aue_flavor.1.t: "Die Marktgrafschaften Rumänien und Bulgarien."
- aue_flavor.1.d: "With the conquest of the terretories of Bulgaria, Moldavia and Wallachia, we now have to decide how those land should be governed. We can of course govern the land themselves, and force our direct rule upon the people or give the land autonomy under our vassalge."
  aue_flavor.1.d: "Mit der Eroberung der Terretorien in Bulgarien, Moldova und Wallachei, müssen wir nun entscheiden, wie diese Ländereien regiert werden sollen. Wir können die Länder selbst regieren und ihnen unsere direkte Herrschaft aufzwingen, oder den Ländern Autonomie geben und unter Vassalenpflicht stellen."
  aue_flavor.1.a: "Wir werden sie selber regieren."
  aue_flavor.1.b: "Den Ländern soll Autonomie gestattet werden, um uns im Krieg zu unterstützen."
@@ -8,6 +7,7 @@
  aue_flavor.2.d: "Die Formation der Europäischen Union ist ohne Frage, ein Zeichen einer neuen Ära. Allerdings, es ist immer noch nicht zur Gänze geklärt, wie die Union regiert werden soll. Wir können unsere Monarchie behalten, mit einem noblen Monarchen, von Gott auserwählt, an der Spitze der Regierung. Oder wir könen den Rüfen der Bürger hören und einen gewählten Regenten an sie Spitze stellen, nicht von Gott, sondern von denselben Bürgern, die ihn gewählt haben, legitimiert."
  aue_flavor.2.a: "Ein starker Herrscher, unbelangt von den zankenden Massen, soll uns regieren!"
  aue_flavor.2.b: "Vom Volk für das Volk!"
+ aue_flavor.2.c: "Rufe den [Root.Monarch.GetTitle] als heiligen Herscher aus."
  aue_flavor.3.t: "Die Frage nach der Hauptstadt."
  aue_flavor.3.d: "Nun müssen wir uns die Frage stellen, von wo aus regiert werden soll. Viele Städte bieten eine prestigeträchtige Option an. Die Hauptstädte alter Reiche. Oder sollen wir uns einen neuen Ort suchen, frei von Einfluss der Geschichte, um unser eigene Bestimmung zu schmieden und eine neue Ära für unser vereintes Europa zu kennzeichnen."
  aue_flavor.3.a: "Brüssel. Zwar keine Stadt reich mit Geschichte, aber eine zentrale Stadt."

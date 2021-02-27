@@ -17,7 +17,10 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 25
-			total_development = 1000
+			development_in_provinces = {
+				value = 1000
+				continent = europe
+			}
 			owns_core_province = 92
 			owns_core_province = 183
 			owns_core_province = 118
@@ -51,6 +54,7 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 	 	effect = {
+	 		restore_country_name = yes
 			change_tag = EUR
 			
 			if = {
@@ -60,13 +64,12 @@ country_decisions = {
 				set_government_rank = 3
 			}
 			country_event = { id = aue_flavor.2 }
-			swap_non_generic_missions = yes
+			#swap_non_generic_missions = yes #reenable when mission for eur are readded
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = GCC_ideas }
 				}
-#				country_event = { id = ideagroups.1 } #Swap Ideas (no special ideas yet)
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			add_country_modifier = { 
 			    name = aue_european_unity

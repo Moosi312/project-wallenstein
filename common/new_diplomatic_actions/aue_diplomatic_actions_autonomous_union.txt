@@ -45,12 +45,11 @@ establish_autonomous_personal_union = {
 	ai_will_do = {
 		FROM = {
 			NOT = { has_country_flag = autonomous_personal_union_was_made_to_personal_union_again }
-			NOT = { liberty_desire = 40 }
+			liberty_desire = 40
 			total_development = 100
-			NOT = { total_development = 300 }
 			years_in_vassalage_under = {
 				who = ROOT
-				years = 70
+				years = 100
 				all_subject_country = yes
 			}
 		}
@@ -83,7 +82,7 @@ return_autonomous_personal_union_to_personal_union = {
 		FROM = {
 			years_in_vassalage_under = {
 				who = ROOT
-				years = 10
+				years = 50
 				all_subject_country = yes
 			}
 		}

@@ -51,7 +51,7 @@ aue_german_confederation = {
 	}
 }
 
-aue_european_hedgemony = {
+european_hedgemony = {
 	rank = {
 		3 = EUROPEAN_HEDGEMONY
 	}
@@ -68,7 +68,7 @@ aue_european_hedgemony = {
 	}
 }
 
-aue_european_council = {
+european_council = {
 	rank = {
 		3 = EUROPEAN_COUNCIL
 	}
@@ -78,6 +78,23 @@ aue_european_council = {
 
 	ruler_female = {
 		3 = PRESIDENT
+	}
+
+	trigger = {
+		has_reform = european_council
+	}
+}
+
+european_church = {
+	rank = {
+		3 = EUROPEAN_CHURCH
+	}
+	ruler_male = {
+		3 = PATRIARCH
+	}
+
+	ruler_female = {
+		3 = MATRIARCH
 	}
 
 	trigger = {

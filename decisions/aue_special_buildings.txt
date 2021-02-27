@@ -9,7 +9,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			owns = 134
+			owns_core_province = 134
 			mil_tech = 10
 			mil = 5
 			treasury = 1000
@@ -39,7 +39,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			owns = 266
+			owns_core_province = 266
 			adm_tech = 10
 			adm = 5
 			treasury = 1000
@@ -68,7 +68,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			owns = 87
+			owns_core_province = 87
 			dip_tech = 10
 			dip = 5
 			treasury = 1000

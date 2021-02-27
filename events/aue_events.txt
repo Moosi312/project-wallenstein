@@ -81,7 +81,7 @@ country_event = {
 		add_government_reform = federal_empire
 	}
 	option = {#theocracy
-		name = aue_flavor.2.b
+		name = aue_flavor.2.c
 		if = {
 			limit = {
 				NOT = { government = theocracy }

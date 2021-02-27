@@ -1,3 +1,6 @@
+
+########## legacy, not in use anymore, planned for descicion to re-form destroyed nations into free marches ###############
+
 aue_margraviate = {
 	copy_from = march
 	

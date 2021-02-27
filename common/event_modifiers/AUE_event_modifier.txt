@@ -2,8 +2,8 @@
 #  Austrian Empire  #
 #####################
 
-autonomous_personal_uniion_modifier = {
-	legitimate_subject_elector = 0
+autonomous_personal_union_modifier = {
+	legitimate_subject_elector = 50
 }
 
 austrian_empire = {

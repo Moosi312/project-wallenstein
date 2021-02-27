@@ -1,0 +1,47 @@
+########################################
+# European Church Factions
+########################################
+
+aue_orthodox = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		devotion = 1
+		global_manpower_modifier = 0.10
+		global_tax_modifier = 0.1
+		country_admin_power = 3
+		country_diplomatic_power = -1
+		country_military_power = -1
+	}
+}
+
+aue_catholics = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		global_trade_power = 0.1
+		diplomatic_reputation = 1
+		prestige = 0.5
+		country_admin_power = -1
+		country_diplomatic_power = 3
+		country_military_power = -1
+	}
+}
+
+aue_protestant = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		leader_fire = 1
+		leader_shock = 1
+		naval_morale = 0.1
+		land_morale = 0.10
+		stability_cost_modifier = 0.1
+		country_admin_power = -1
+		country_diplomatic_power = -1
+		country_military_power = 3
+	}
+}

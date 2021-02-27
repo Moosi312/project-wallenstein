@@ -7,6 +7,7 @@
  aue_flavor.2.d: "The formation of the European Union is without question the mark of a new era approching. However, our government is still divided on how the Union should be governed. We can keep our monarchy to rule with an enlightended ruler dignified by God at the head of the government, or we could answer the calls of the people, placing an elected ruler at the top, legitimized not by god, but by the very people he rules."
  aue_flavor.2.a: "A strong ruler, anaffected by the squabling rabble, shall rule us!"
  aue_flavor.2.b: "From the people for the people!"
+ aue_flavor.2.c: "Proclaim the [Root.Monarch.GetTitle] as a holy monarch."
  aue_flavor.3.t: "The question of the capital"
  aue_flavor.3.d: "Now it comes to the question of where to place our center of rule. Multiple cities seem to be a prestigious option. The capitals of old empires and kingdoms. Or maybe we should choose new location, free from the influence of history, to forge our own destiny to signify this new era of a united Europe."
  aue_flavor.3.a: "Brussels. No city with a great history, but a central location."

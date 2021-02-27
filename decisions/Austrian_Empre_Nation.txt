@@ -13,7 +13,15 @@ country_decisions = {
 			OR = {
 				primary_culture = austrian
 				primary_culture = hungarian
+				primary_culture = croatian
+				primary_culture = serbian
+				primary_culture = slovene
+				primary_culture = bosnian
+				primary_culture = schlesian
+				primary_culture = sorbian
+				primary_culture = slovak
 				primary_culture = czech
+				primary_culture = transylvanian
 			}
 			OR = {
 				ai = no
@@ -28,7 +36,6 @@ country_decisions = {
 			total_development = 500
 			is_subject = no
 			is_at_war = no
-			primary_culture = austrian
 			NOT = { exists = AUE }
 			
                         owns_core_province = 134 # Wien
@@ -93,4 +100,24 @@ country_decisions = {
 		}
 	}
 
-			
+	austrian_empire_name = {
+		major = yes
+
+		potential = {
+			NOT = { has_country_flag = austrian_empire_name_set }
+			tag = AUE
+			primary_culture = austrian
+		}
+
+		allow = {
+			tag = AUE
+			primary_culture = austrian
+			government_rank = 3
+		}
+
+		effect = {
+			override_country_name = AUSTRIAN_EMPIRE
+			set_country_flag = austrian_empire_name_set
+		}
+	}
+}

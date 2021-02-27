@@ -5,5 +5,6 @@ tags={
 	"New Nations"
 	"Gameplay"
 }
+picture="austrianempire.png"
 name="Austrian Empire"
 supported_version="1.30.*"

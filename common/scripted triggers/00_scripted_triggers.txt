@@ -52,6 +52,8 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { tag = ADU }
 			NOT = { tag = LOT }
 
+			# Austrian Empire
+
 			NOT = { was_tag = GCC }
 			NOT = { was_tag = EUR }
 			NOT = { was_tag = AUE }

@@ -5,7 +5,8 @@ EUR_ideas = {
 	}
 	
 	bonus = {
-		reduced_liberty_desire = 50
+		state_governing_cost = -0.2
+		trade_company_governing_cost = -0.2
 	}
 	
 	trigger = {

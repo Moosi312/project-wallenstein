@@ -16,7 +16,8 @@ king_of_germany = {
 				}
 				num_of_electors = 7
 			}
-			hre_reform_level = 6
+			hre_reform_passed = emperor_erbkaisertum
+			hre_reform_passed = erbkaisertum
 		}
 		hre_size = 25
 	}

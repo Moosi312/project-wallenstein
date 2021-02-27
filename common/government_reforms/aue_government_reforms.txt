@@ -138,7 +138,7 @@ european_hedgemony = {
 		global_manpower_modifier = 0.75
 		global_regiment_cost = -0.4	
 
-		development_cost = -0.5
+		development_cost = -0.2
 		max_absolutism = 10
 	}
 }
@@ -192,7 +192,13 @@ european_church = {
 	fixed_rank = 3
 	allow_force_tributary = yes
 	has_term_election = no
-	has_parliament = yes
+	has_parliament = no
+
+	factions = {
+		aue_orthodox
+		aue_catholics
+		aue_protestant
+	}
 
 	modifiers = {
 		tolerance_own = 2
@@ -217,8 +223,10 @@ european_church = {
 federal_empire = {
 	icon = "horde_riding"
 	potential = {
-		tag = EUR
-		has_reform = federal_empire
+		OR = {
+			tag = EUR
+			has_reform = federal_empire
+		}
 	}
 
 	lock_level_when_selected = yes
@@ -375,6 +383,7 @@ german_conferation = {
 		OR = {
 			tag = GCC
 			has_reform = german_conferation
+			had_reform = german_conferation
 		}
 	}
 	legacy_equivalent = german_conferation_legacy
@@ -398,7 +407,7 @@ german_conferation = {
 		global_prov_trade_power_modifier = 1.0
 		development_cost = -0.2
 		max_absolutism = 10
-		monarch_diplomatic_power = 1
+		monarch_administrative_power = 1
 		monarch_military_power = 1
 
 		governing_capacity_modifier = 0.5
@@ -412,6 +421,7 @@ aue_austrian_dual_monarchy = {
 		OR = {
 			tag = AUE
 			has_reform = aue_austrian_dual_monarchy
+			had_reform = aue_austrian_dual_monarchy
 		}
 	}
 

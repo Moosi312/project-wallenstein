@@ -26,7 +26,6 @@ cb_subject_unify = {
 
 	prerequisites = {
 		has_reform = european_council
-		is_revolution_target = no
 		FROM = {
 			capital_scope = {
 				continent = europe
