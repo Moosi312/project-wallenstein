@@ -474,6 +474,8 @@ theocracy = {
 		theocratic_government
 		monastic_order_government
 		holy_state_legacy
+		# Austrian Empire
+		european_church_legacy
 	}
 	reform_levels = {
 		theocratic_leadership = {
