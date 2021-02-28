@@ -33,6 +33,7 @@ country_decisions = {
 			}
 			is_subject = no
 			is_at_war = no
+			is_emperor = no
 			capital_scope = {
 				continent = europe
 			}

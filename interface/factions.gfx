@@ -1,0 +1,33 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_faction_bg_aue_orthodox"
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_aue_orthodox"
+		texturefile = "gfx//interface//faction_orthodox.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_aue_orthodox"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_aue_orthodox"
+		texturefile = "gfx//interface//faction_catholic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_aue_orthodox"
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_aue_orthodox"
+		texturefile = "gfx//interface//faction_protestant.dds"
+	}
+
+	
+}

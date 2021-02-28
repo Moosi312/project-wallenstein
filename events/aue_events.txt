@@ -68,6 +68,7 @@ country_event = {
 		}
 		add_government_reform = european_hedgemony
 		add_government_reform = federal_empire
+		override_country_name = EUROPEAN_HEDGEMONY
 	}
 	option = {#republic
 		name = aue_flavor.2.b
@@ -79,6 +80,7 @@ country_event = {
 		}
 		add_government_reform = european_council
 		add_government_reform = federal_empire
+		override_country_name = EUROPEAN_FEDERATION
 	}
 	option = {#theocracy
 		name = aue_flavor.2.c
@@ -90,6 +92,7 @@ country_event = {
 		}
 		add_government_reform = european_church
 		add_government_reform = federal_empire
+		override_country_name = EUROPEAN_CHURCH
 	}
 	after = {
 		country_event = { id = aue_flavor.3 }
