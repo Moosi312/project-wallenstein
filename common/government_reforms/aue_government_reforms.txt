@@ -156,7 +156,6 @@ european_council = {
 
 	fixed_rank = 3
 	allow_force_tributary = yes
-	has_term_election = no
 	has_parliament = yes
 
 	modifiers = {
@@ -170,7 +169,6 @@ european_council = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
-		generals_become_rulers = yes
 	}
 }
 
@@ -389,14 +387,13 @@ german_conferation = {
 	modifiers = {
 		land_forcelimit_modifier = 0.25
 		global_manpower_modifier = 0.25
- 		global_manpower = 0.5
 		global_regiment_cost = -0.2
 
 		technology_cost = -0.2
 		global_prov_trade_power_modifier = 1.0
 		development_cost = -0.2
 		max_absolutism = 10
-		monarch_administrative_power = 1
+		monarch_admin_power = 1
 		monarch_military_power = 1
 
 		governing_capacity_modifier = 0.5

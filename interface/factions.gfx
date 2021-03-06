@@ -11,7 +11,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_faction_bg_aue_catholics"
-		texturefile = "gfx/interface/faction_blue_frame.tga"
+		texturefile = "gfx/interface/faction_yellow_frame.tga"
 		transparencecheck = yes
 	}
 	spriteType = {
@@ -21,7 +21,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_faction_bg_aue_protestant"
-		texturefile = "gfx/interface/faction_red_frame.tga"
+		texturefile = "gfx/interface/faction_blue_frame.tga"
 		transparencecheck = yes
 	}
 	spriteType = {
