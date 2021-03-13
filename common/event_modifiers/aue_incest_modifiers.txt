@@ -1,0 +1,50 @@
+
+aue_incest_event_admin_p2 = {
+	monarch_admin_power = 2
+}
+
+aue_incest_event_admin_p1 = {
+	monarch_admin_power = 1
+}
+
+aue_incest_event_admin_m1 = {
+	monarch_admin_power = -1
+}
+
+aue_incest_event_admin_m2 = {
+	monarch_admin_power = -2
+}
+
+
+aue_incest_event_diplo_p2 = {
+	monarch_diplomatic_power = 2
+}
+
+aue_incest_event_diplo_p1 = {
+	monarch_diplomatic_power = 1
+}
+
+aue_incest_event_diplo_m1 = {
+	monarch_diplomatic_power = -1
+}
+
+aue_incest_event_diplo_m2 = {
+	monarch_diplomatic_power = -2
+}
+
+
+aue_incest_event_mil_p2 = {
+	monarch_military_power = 2
+}
+
+aue_incest_event_mil_p1 = {
+	monarch_military_power = 1
+}
+
+aue_incest_event_mil_m1 = {
+	monarch_military_power = -1
+}
+
+aue_incest_event_mil_m2 = {
+	monarch_military_power = -2
+}

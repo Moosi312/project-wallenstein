@@ -1,0 +1,371 @@
+#####################
+##  Incest Events  ##
+#####################
+
+namespace = aue_incest
+
+country_event = {
+	id = aue_incest.1
+	title = aue_incest.1.t
+	desc = aue_incest.1.d
+	picture = ORTHODOX_eventPicture
+
+	trigger = {
+		OR = {
+			tag = HAB
+			tag = AUE
+			tag = SPA
+			dynasty = "von Habsburg"
+		}
+		government = monarchy
+		has_regency = no
+		has_consort = no
+		has_heir = no
+	}
+
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.5
+			dynasty = "von Habsburg"
+		}
+
+		modifier = {
+			factor = 0.8
+			ruler_age = 40
+		}
+
+		modifier = {
+			factor = 0.7
+			ruler_age = 50
+		}
+
+		modifier = {
+			factor = 0.6
+			ruler_age = 60
+		}
+	}
+	
+	major = yes
+
+	immediate = {
+		remove_country_modifier = aue_incest_event_admin_p2
+		remove_country_modifier = aue_incest_event_admin_p1
+		remove_country_modifier = aue_incest_event_admin_m1
+		remove_country_modifier = aue_incest_event_admin_m2
+		remove_country_modifier = aue_incest_event_diplo_p2
+		remove_country_modifier = aue_incest_event_diplo_p1
+		remove_country_modifier = aue_incest_event_diplo_m1
+		remove_country_modifier = aue_incest_event_diplo_m2
+		remove_country_modifier = aue_incest_event_mil_p2
+		remove_country_modifier = aue_incest_event_mil_p1
+		remove_country_modifier = aue_incest_event_mil_m1
+		remove_country_modifier = aue_incest_event_mil_m2
+	}
+
+
+	option = {
+		name = aue_incest.1.a
+		add_papal_influence = 10
+		add_prestige = 5
+		add_legitimacy = 10
+	}
+	option = {
+		name = aue_incest.1.b
+		custom_tooltip = aue_tt_incest_warning
+
+		set_ruler_flag = has_lowborn_consort
+
+		define_consort = {
+			dynasty = ROOT
+		    country_of_origin = ROOT
+		    religion = ROOT
+		    culture = ROOT
+		}
+
+		clr_ruler_flag = has_lowborn_consort
+
+		add_papal_influence = -10
+		add_prestige = -5
+		add_legitimacy = -10
+
+		#add hidden back, removed for test puropses
+		hidden_effect = {
+			#adm
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 2
+						adm = 5
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_admin_p2
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 1.5
+						adm = 4
+					}
+					modifier = {
+						factor = 2
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_admin_p1
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 1.5
+						NOT = { adm = 3 }
+					}
+					modifier = {
+						factor = 2
+						had_country_flag = {
+							flag = aue_incest_happened_flag
+							days = 36500
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_admin_m1
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						NOT = { adm = 2 }
+					}
+					modifier = {
+						factor = 1.5
+						had_country_flag = {
+							flag = aue_incest_happened_flag
+							days = 36500
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_admin_m2
+						duration = -1
+						#hidden = yes
+					}
+				}
+			}
+
+			# dip
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 2
+						dip = 5
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_diplo_p2
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 1.5
+						dip = 4
+					}
+					modifier = {
+						factor = 2
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_diplo_p1
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 1.5
+						NOT = { dip = 3 }
+					}
+					modifier = {
+						factor = 2
+						had_country_flag = {
+							flag = aue_incest_happened_flag
+							days = 36500
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_diplo_m1
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						NOT = { dip = 2 }
+					}
+					modifier = {
+						factor = 1.5
+						had_country_flag = {
+							flag = aue_incest_happened_flag
+							days = 36500
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_diplo_m2
+						duration = -1
+						#hidden = yes
+					}
+				}
+			}
+
+			# mil
+			random_list = {
+				20 = {
+					modifier = {
+						factor = 2
+						mil = 5
+					}
+					modifier = {
+						factor = 1.5
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_mil_p2
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 1.5
+						mil = 4
+					}
+					modifier = {
+						factor = 2
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_mil_p1
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						NOT = {
+							had_country_flag = {
+								flag = aue_incest_happened_flag
+								days = 36500
+							}
+						}
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 1.5
+						NOT = { mil = 3 }
+					}
+					modifier = {
+						factor = 2
+						had_country_flag = {
+							flag = aue_incest_happened_flag
+							days = 36500
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_mil_m1
+						duration = -1
+						#hidden = yes
+					}
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						NOT = { mil = 2 }
+					}
+					modifier = {
+						factor = 1.5
+						had_country_flag = {
+							flag = aue_incest_happened_flag
+							days = 36500
+						}
+					}
+					add_ruler_modifier = {
+						name = aue_incest_event_mil_m2
+						duration = -1
+						#hidden = yes
+					}
+				}
+			}
+		}
+		
+		set_country_flag = aue_incest_happened_flag
+	}
+}

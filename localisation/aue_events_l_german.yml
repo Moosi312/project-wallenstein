@@ -15,3 +15,7 @@
  aue_flavor.3.c: "Wien. Die langzeitige Hauptstadt des Heiligen Römischen Reiches und ein zentraler Ort in Europa."
  aue_flavor.3.e: "Paris. Die Hauptstadt der Franzosen. Vermächtnis Karl des Großen."
  aue_flavor.3.f: "Wie werden in unserer Hauptstadt bleiben. Wir werden unser Vermächtnis schmieden, wo es anfing."
+ aue_incest.1.t: "Incestous Realtions"
+ aue_incest.1.d: "The bed of the [Root.Monarch.GetTitle] has been empty for quite some time and no suitor from other families could be found. But rumors have been circulating, that our [Root.Monarch.GetTitle] has taken a liking to one of [Root.Monarch.GetHerHis] cousins.\nShould we encourage this behaviour? Incestous relations between ruling families have often been attributed to better offspring, although many would contest such claims. While such a \"divine marriage\" might not be very popular with the church, it would increase our chances for an heir. And maybe a pure blooded heir of great strength could result from this, or maybe it will be a sickly little child. Who yould predict it?"
+ aue_incest.1.a: "This is preposterous. An affront to all that is good and holy!"
+ aue_incest.1.b: "Why not? A pure blooded heir might proof more capable."
